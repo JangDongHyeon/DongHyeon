@@ -6,12 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="css/${content}.css?ver=3">
+<link rel="stylesheet" type="text/css" href="css/boardList.css?ver=3">
 <link rel="stylesheet" type="text/css" href="css/common.css?ver=5">
 </head>
 <body>
 	<jsp:include page="top.jsp"/>
 	<div class="container">
+
 	<table>
 			<tr>
 				<th class="num">번호</th>
@@ -29,6 +30,14 @@
 		<div class="button">
 			<button>글쓰기</button>
 		</div>
+	<div>${page}</div>
+	<div>
+	<form action="boardList.bo">
+	<input type="text" name="con"> 
+	<input type="submit" value="전송"> 
+	</form>
+	</div>
+	
 	</div>	
 	<jsp:include page="bottom.jsp"/>
 </body>

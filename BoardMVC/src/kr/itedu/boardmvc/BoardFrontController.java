@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import kr.itedu.boardmvc.action.Action;
 import kr.itedu.boardmvc.action.BoardHomeAction;
+import kr.itedu.boardmvc.action.BoardInsertAction;
 import kr.itedu.boardmvc.action.BoardListAction;
 
 /**
@@ -47,6 +48,15 @@ public class BoardFrontController extends HttpServlet {
 				// TODO: handle exception
 			}
 			
+		}else if(comd.equals("/insert.bo")) {
+	
+			//action=new BoardInsertAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+				// TODO: handle exception
+		}
 		}
 		
 		if(forward != null) {
@@ -58,8 +68,8 @@ public class BoardFrontController extends HttpServlet {
 			}
 		}
 		
-	}	
-   
+	
+	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		doProc(request, response);
@@ -72,3 +82,4 @@ public class BoardFrontController extends HttpServlet {
 	}
 
 }
+
