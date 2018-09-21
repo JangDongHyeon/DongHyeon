@@ -24,14 +24,18 @@ public class BoardListAction implements Action {
 		ActionForward forward = new ActionForward();
 		forward.setPath(Var.TEMPLATE_1);
 		forward.setRedirect(false);
-		
+		String con="";
 		int page=0;
 		if(request.getParameter("page")==null) {
 			page=1;
 		}else {
 		page=Integer.parseInt(request.getParameter("page"));
 		}
+		if(request.getParameter("con")==null) {
+			
+		}else{
 		
+		}
 		System.out.println(page);
 		BoardListService service = new BoardListService();
 			/*ArrayList<BoardVO> data = service.getBoardList(page);*/
